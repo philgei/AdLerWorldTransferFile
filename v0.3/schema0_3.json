@@ -71,6 +71,9 @@
               "includedPoints": {
                 "type": "integer"
               },
+              "requiredPoints": {
+                "type": "integer"
+              },
               "requiredSpaces": {
                 "type": "string"
               }

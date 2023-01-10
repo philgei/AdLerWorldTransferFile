@@ -19,6 +19,7 @@
         "spaceLearningGoals": ["Ziel 1", "Ziel 2"],
         "learningSpaceContent": [1, 2, 3],
         "includedPoints": 123,
+        "requiredPoints": 100,
         "requiredSpaces": "(5)v((7)^(4))"
       },
       {
@@ -31,6 +32,7 @@
         "spaceLearningGoals": ["Ziel 1", "Ziel 2"],
         "learningSpaceContent": [5, 6],
         "includedPoints": 123,
+        "requiredPoints": 100,
         "requiredSpaces": "(5)v((7)^(4))"
       }
     ],

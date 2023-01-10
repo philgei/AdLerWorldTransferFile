@@ -34,7 +34,8 @@ Die Namen von Schlüsseln, welche mehrere Werte (Arrays) beinhalten, sollen imme
 | worldLearningGoals   | [string]                  | Einzelne Lernziele der Welt                                                                 |
 | learningSpaceContent | [int]                     | ids der LernRäume, welche sich in der Welt befinden                                         |
 | includedPoints       | int                       | direkt beim Start wird sich in Moodle angemeldet                                            |
-| requiredSpaces        | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die bedingung zum öffnen des Space bilden        |
+| requiredPoints       | integer                    | Wie viele Punkte in einem Raum angesammelt werden müssen, damit er als abgeschlossen gilt  |
+| requiredSpaces       | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die bedingung zum öffnen des Space bilden        |
 | elementId            | int                       | in des LernElements                                                                         |
 | elementDescription   | string                    | Beschreibung des Lernelements                                                               |
 | elementLearningGoal  | string                    | ziel des lernelements                                                                       |
@@ -47,6 +48,28 @@ Das File Format ist mittels JSON-Schema definiert. Neben einer eindeutigen Dokum
 
 Ein JSON-Schema zu jeder Version ist in den Entsprechenden Ordnern zu finden.
 
+## Bedingungen für Lernräume mittels Aussagelogik erstellen
+Die Bedingungen zwischen Lernräumen gehen über reine Mindestpunkte hinaus. Aus diesem Grund wurde eine Aussagelogik implementiert, welche es ermöglicht, die Bedingungen zwischen Lernräumen zu definieren. 
+
+Dabei werden räume mittels UND (^) und ODER (v) verknüpft. Komplexere zusammenhänge können mittels Klammern realisiert werden. Eine Negation oder ähnliches ist nicht möglich, jedoch gilt die allgemeine Regel "Und vor Oder".
+
+Dabei ist zu beachten, dass ein Raum ab dann als abgeschlossen gilt, wenn er seine benötigen Punkte zur Freischaltung erreicht hat.
+
+Eine Beispielhafte Verknüpfung für einen Lernraum ist: `"requiredSpaces": "(5)v((7)^(4))"`
+
+### Mögliche Werte (Bitte ergänzen)
+#### lmsIdentifier
+- type: "idNumber"
+  - value: "UUID"
+- type: "moduleName"
+  - value: "NameDesModulsInMoodle"
+
+#### elementCategory
+- "image", "text", "h5p" oder "video"
+
+#### elementContentType
+- "image:jpeg", "image:png", "video:mp4", "h5p" weitere bitte von AMG ergänzen 
+
 ## Changelog
 
 # Diskussionspunkte
@@ -58,3 +81,13 @@ Ein JSON-Schema zu jeder Version ist in den Entsprechenden Ordnern zu finden.
 - **elementContent**: Wurde entfernt, da der content des Lernelements ohnthin über die API erfragt wird, da nicht in jeden fall der content hier angegeben werden kann.
 - **elementContentType**: Gibt an, wie der Inhalt des Element behandelt werden muss, sobald er von dem 3D Frontend geladen wurde. 
 - **learningSpaceParentId**: Wurde entfernt, da es eine redundante Information ist und nicht nicht Normalisiert ist.
+
+# Breaking changes zu der undokumentierten Version
+- `identifier` ist kein Array zudem gibt es nicht mehr den typen "fileName", sondern er heißt jetzt "moduleName" außerdem heißt er jetzt `lmsIdentifier`
+- `description` wurde in `worldDescription` umbenannt gleiches gilt für Elemente
+- `goals` der Lernwelt wurde in `worldLearningGoals` umbenannt gleiches gilt für Elemente
+- `worldGoals` ist ein Array (auf jeden fall als Diskussionsgrundlage)
+- `requirements` heißt jetzt `requiredSpaces`
+- `elementType` hat die Syntax: elementkategorie:elementtyp
+- `learningElementValueList` wird durch einen einfachen Integer `elementPoints` ersetzt
+- 
