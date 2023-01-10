@@ -24,7 +24,23 @@ Die Namen von schlüsseln, welche einen einzigen Wert beinhalten, sollen immer i
 Die Namen von Schlüsseln, welche mehrere Werte (Arrays) beinhalten, sollen immer im Plural geschrieben werden.
 
 ## Beschreibung der einzelnen Felder
-TODO
+| Schlüssel            | Datentyp                  | Funktion                                                                                    |
+|----------------------|---------------------------|---------------------------------------------------------------------------------------------|
+| fileVersion          | string                    | gibt die Version des AWT Files an                                                           |
+| amgVersion           | string                    | gibt die Version des AMG Tools an                                                           |
+| leanringWorld        | objekt                    | beinhaltet alle Daten der Wernwelt                                                          |
+| lmsIdentifier        | objekt                    | Objekt, welches durch angabe von Typ und Wert ein Elmenten im LMS eindeutig bezeichnen kann |
+| worldDescription     | string                    | beschreibung der Lernwelt, welche dem Nutzer angezeigt wird                                 |
+| worldLearningGoals   | [string]                  | Einzelne Lernziele der Welt                                                                 |
+| learningSpaceContent | [int]                     | ids der LernRäume, welche sich in der Welt befinden                                         |
+| includedPoints       | int                       | direkt beim Start wird sich in Moodle angemeldet                                            |
+| requiredSpaces        | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die bedingung zum öffnen des Space bilden        |
+| elementId            | int                       | in des LernElements                                                                         |
+| elementDescription   | string                    | Beschreibung des Lernelements                                                               |
+| elementLearningGoal  | string                    | ziel des lernelements                                                                       |
+| elementCategory      | string                    | art des Lernelements (Bild, Text, H5P, etc)                                                 |
+| elementConentType    | string                    | genauer Content des Lernelements (im Falle bild: Jpeg, PNG, ...)                            |
+| elementPoints        | integer                   | wie viele punkte gibt das Element (maximal) wenn es abgeschlossen ist                       |
 
 ## JSON Schema
 Das File Format ist mittels JSON-Schema definiert. Neben einer eindeutigen Dokumentation aller Typen, Elementen, Schlüsseln und Strukturen kann damit auch eine Validierung der Datei ausgeführt werden. 
