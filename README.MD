@@ -90,4 +90,5 @@ Eine Beispielhafte Verknüpfung für einen Lernraum ist: `"requiredSpaces": "(5)
 - `requirements` heißt jetzt `requiredSpaces`
 - `elementType` hat die Syntax: elementkategorie:elementtyp
 - `learningElementValueList` wird durch einen einfachen Integer `elementPoints` ersetzt
-- 
+- `learningSpaceParentId` ist nicht mehr vorhanden
+- `fileVersion` zwingend benötigt (oder ist wird auf ein default Seites backend und 3D zurück gefallen)
