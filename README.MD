@@ -47,8 +47,6 @@ Das File Format ist mittels JSON-Schema definiert. Neben einer eindeutigen Dokum
 
 Ein JSON-Schema zu jeder Version ist in den Entsprechenden Ordnern zu finden.
 
-TODO: JSON SCHEMA SCHREIBEN^^
-
 ## Changelog
 
 # Diskussionspunkte
