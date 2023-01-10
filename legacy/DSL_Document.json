@@ -1,0 +1,785 @@
+{
+  "learningWorld": {
+    "idNumber": "08119447-2b24-4ed0-8d1b-801c22bd926f",
+    "identifier": {
+      "type": "name",
+      "value": "Software Engineering"
+    },
+    "description": "",
+    "goals": "",
+    "learningWorldContent": [],
+    "topics": [],
+    "learningSpaces": [
+      {
+        "spaceId": 1,
+        "identifier": {
+          "type": "name",
+          "value": "Metriken"
+        },
+        "description": "",
+        "goals": "",
+        "learningSpaceContent": [1, 2, 3, 4, 5, 6, 7, 8],
+        "requiredPoints": 100,
+        "includedPoints": 120,
+        "requirements": "(5)v((7)^(4))"
+      },
+      {
+        "spaceId": 2,
+        "identifier": {
+          "type": "name",
+          "value": "McCabe Aufgaben"
+        },
+        "description": "",
+        "goals": "",
+        "learningSpaceContent": [9, 10, 11, 12, 13, 14, 15, 16],
+        "requiredPoints": 210,
+        "includedPoints": 210,
+        "requirements": "(5)v((7)^(4))"
+      },
+      {
+        "spaceId": 3,
+        "identifier": {
+          "type": "name",
+          "value": "Lines of Code (LOC)"
+        },
+        "description": "",
+        "goals": "",
+        "learningSpaceContent": [17, 18, 19, 20, 21, 22, 23, 24],
+        "requiredPoints": 120,
+        "includedPoints": 120,
+        "requirements": "(5)v((7)^(4))"
+      },
+      {
+        "spaceId": 4,
+        "identifier": {
+          "type": "name",
+          "value": "Info Halstaed"
+        },
+        "description": "",
+        "goals": "",
+        "learningSpaceContent": [25, 26, 27, 28, 29, 30, 31, 32],
+        "requiredPoints": 120,
+        "includedPoints": 120,
+        "requirements": "(5)v((7)^(4))"
+      },
+      {
+        "spaceId": 5,
+        "identifier": {
+          "type": "name",
+          "value": "Info McCabe"
+        },
+        "description": "",
+        "goals": "",
+        "learningSpaceContent": [33, 34, 35, 36, 37],
+        "requiredPoints": 50,
+        "includedPoints": 50,
+        "requirements": "(5)v((7)^(4))"
+      }
+    ],
+    "learningElements": [
+      {
+        "id": 1,
+        "identifier": {
+          "type": "FileName",
+          "value": "Metriken Teil 1"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 1
+      },
+      {
+        "id": 2,
+        "identifier": {
+          "type": "FileName",
+          "value": "Metriken Teil 2"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 1
+      },
+      {
+        "id": 3,
+        "identifier": {
+          "type": "FileName",
+          "value": "Definition Metriken"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 1
+      },
+      {
+        "id": 4,
+        "identifier": {
+          "type": "FileName",
+          "value": "Wozu Metriken"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 1
+      },
+      {
+        "id": 5,
+        "identifier": {
+          "type": "FileName",
+          "value": "Wortsuche Metriken"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "20"
+          }
+        ],
+        "learningSpaceParentId": 1
+      },
+      {
+        "id": 6,
+        "identifier": {
+          "type": "FileName",
+          "value": "Arten von Metriken"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 1
+      },
+      {
+        "id": 7,
+        "identifier": {
+          "type": "FileName",
+          "value": "Eigenschaften von Metriken"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 1
+      },
+      {
+        "id": 8,
+        "identifier": {
+          "type": "FileName",
+          "value": "Metriken zuordnen"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "40"
+          }
+        ],
+        "learningSpaceParentId": 1
+      },
+      {
+        "id": 9,
+        "identifier": {
+          "type": "FileName",
+          "value": "Definition McCabe"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 2
+      },
+      {
+        "id": 10,
+        "identifier": {
+          "type": "FileName",
+          "value": "Aufgabe 1 McCabe"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "20"
+          }
+        ],
+        "learningSpaceParentId": 2
+      },
+      {
+        "id": 11,
+        "identifier": {
+          "type": "FileName",
+          "value": "Aufgabe 2 McCabe"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "20"
+          }
+        ],
+        "learningSpaceParentId": 2
+      },
+      {
+        "id": 12,
+        "identifier": {
+          "type": "FileName",
+          "value": "Hotspot McCabe Bedingungen"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "30"
+          }
+        ],
+        "learningSpaceParentId": 2
+      },
+      {
+        "id": 13,
+        "identifier": {
+          "type": "FileName",
+          "value": "Aufgabe 3 McCabe"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "30"
+          }
+        ],
+        "learningSpaceParentId": 2
+      },
+      {
+        "id": 14,
+        "identifier": {
+          "type": "FileName",
+          "value": "Hotspot McCabe SwitchCase"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "30"
+          }
+        ],
+        "learningSpaceParentId": 2
+      },
+      {
+        "id": 15,
+        "identifier": {
+          "type": "FileName",
+          "value": "Aufgabe 4 McCabe"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "30"
+          }
+        ],
+        "learningSpaceParentId": 2
+      },
+      {
+        "id": 16,
+        "identifier": {
+          "type": "FileName",
+          "value": "Aufgabe 5 McCabe"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "40"
+          }
+        ],
+        "learningSpaceParentId": 2
+      },
+      {
+        "id": 17,
+        "identifier": {
+          "type": "FileName",
+          "value": "LOC 1"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 3
+      },
+      {
+        "id": 18,
+        "identifier": {
+          "type": "FileName",
+          "value": "LOC 2"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 3
+      },
+      {
+        "id": 19,
+        "identifier": {
+          "type": "FileName",
+          "value": "Definition PLOC"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 3
+      },
+      {
+        "id": 20,
+        "identifier": {
+          "type": "FileName",
+          "value": "Definition SLOC"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 3
+      },
+      {
+        "id": 21,
+        "identifier": {
+          "type": "FileName",
+          "value": "Beispiel PLOC SLOC C\u002B\u002B"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 3
+      },
+      {
+        "id": 22,
+        "identifier": {
+          "type": "FileName",
+          "value": "Aufgabe PLOC"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "20"
+          }
+        ],
+        "learningSpaceParentId": 3
+      },
+      {
+        "id": 23,
+        "identifier": {
+          "type": "FileName",
+          "value": "Aufgabe SLOC"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "20"
+          }
+        ],
+        "learningSpaceParentId": 3
+      },
+      {
+        "id": 24,
+        "identifier": {
+          "type": "FileName",
+          "value": "Berechne PLOC SLOC"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "30"
+          }
+        ],
+        "learningSpaceParentId": 3
+      },
+      {
+        "id": 25,
+        "identifier": {
+          "type": "FileName",
+          "value": "Halstaed"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 4
+      },
+      {
+        "id": 26,
+        "identifier": {
+          "type": "FileName",
+          "value": "Definition Halstaed"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 4
+      },
+      {
+        "id": 27,
+        "identifier": {
+          "type": "FileName",
+          "value": "Beispiel Operatoren"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 4
+      },
+      {
+        "id": 28,
+        "identifier": {
+          "type": "FileName",
+          "value": "Beispiel Operanden"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 4
+      },
+      {
+        "id": 29,
+        "identifier": {
+          "type": "FileName",
+          "value": "Beispiel Gesamt"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 4
+      },
+      {
+        "id": 30,
+        "identifier": {
+          "type": "FileName",
+          "value": "Beispiel Besonderheiten"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 4
+      },
+      {
+        "id": 31,
+        "identifier": {
+          "type": "FileName",
+          "value": "Schiebespiel"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "30"
+          }
+        ],
+        "learningSpaceParentId": 4
+      },
+      {
+        "id": 32,
+        "identifier": {
+          "type": "FileName",
+          "value": "Aufgabe Halstaed"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "30"
+          }
+        ],
+        "learningSpaceParentId": 4
+      },
+      {
+        "id": 33,
+        "identifier": {
+          "type": "FileName",
+          "value": "McCabe1"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 5
+      },
+      {
+        "id": 34,
+        "identifier": {
+          "type": "FileName",
+          "value": "McCabe 2"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "h5p",
+        "elementType": "h5p",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 5
+      },
+      {
+        "id": 35,
+        "identifier": {
+          "type": "FileName",
+          "value": "Definition_McCabe"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 5
+      },
+      {
+        "id": 36,
+        "identifier": {
+          "type": "FileName",
+          "value": "Beispiel McCabe Switch-Case"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 5
+      },
+      {
+        "id": 37,
+        "identifier": {
+          "type": "FileName",
+          "value": "Beispiel McCabe Bedingungen"
+        },
+        "url": "",
+        "description": "",
+        "goals": "",
+        "elementCategory": "image",
+        "elementType": "png",
+        "learningElementValueList": [
+          {
+            "type": "Points",
+            "value": "10"
+          }
+        ],
+        "learningSpaceParentId": 5
+      }
+    ]
+  }
+}

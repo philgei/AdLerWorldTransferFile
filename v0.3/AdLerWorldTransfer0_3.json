@@ -1,0 +1,52 @@
+{
+  "fileVersion": "0.3",
+  "amgVersion": "1.0",
+  "learningWorld": {
+    "lmsIdentifier": {
+      "type": "idNumber",
+      "value": "123456789randomID"
+    },
+    "worldDescription": "Beschreibung der Welt",
+    "worldLearningGoals": ["Ziel 1", "Ziel 2"],
+    "learningSpaces": [
+      {
+        "spaceId": 1,
+        "lmsIdentifier": {
+          "type": "idNumber",
+          "value": "123456789randomID"
+        },
+        "spaceDescription": "Beschreibung des Lernraums",
+        "spaceLearningGoals": ["Ziel 1", "Ziel 2"],
+        "learningSpaceContent": [1, 2, 3],
+        "includedPoints": 123,
+        "requiredRooms": "(5)v((7)^(4))"
+      },
+      {
+        "spaceId": 2,
+        "lmsIdentifier": {
+          "type": "idNumber",
+          "value": "123456789randomID"
+        },
+        "spaceDescription": "Beschreibung des Lernraums",
+        "spaceLearningGoals": ["Ziel 1", "Ziel 2"],
+        "learningSpaceContent": [5, 6],
+        "includedPoints": 123,
+        "requiredRooms": "(5)v((7)^(4))"
+      }
+    ],
+    "learningElements": [
+      {
+        "elementId": 1,
+        "lmsIdentifier": {
+          "type": "moduleName",
+          "value": "Ein wunderschöner, für den Nutzer sichtbarer, String"
+        },
+        "elementDescription": "Beschreibung des Lernelements",
+        "elementLearningGoal": "Ziel",
+        "elementCategory": "image",
+        "elementContentType": "image:png",
+        "elementPoints": 123
+      }
+    ]
+  }
+}
