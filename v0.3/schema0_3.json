@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "fileVersion": {
+      "type": "string"
+    },
+    "amgVersion": {
+      "type": "string"
+    },
+    "learningWorld": {
+      "type": "object",
+      "properties": {
+        "lmsIdentifier": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": ["type", "value"]
+        },
+        "worldDescription": {
+          "type": "string"
+        },
+        "worldLearningGoals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "learningSpaces": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "spaceId": {
+                "type": "integer"
+              },
+              "lmsIdentifier": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": ["type", "value"]
+              },
+              "spaceDescription": {
+                "type": "string"
+              },
+              "spaceLearningGoals": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "learningSpaceContent": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "minItems": 1
+              },
+              "includedPoints": {
+                "type": "integer"
+              },
+              "requiredSpaces": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "spaceId",
+              "lmsIdentifier",
+              "spaceDescription",
+              "spaceLearningGoals",
+              "learningSpaceContent",
+              "includedPoints",
+              "requiredSpaces"
+            ]
+          },
+          "minItems": 1
+        },
+        "learningElements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "elementId": {
+                "type": "integer"
+              },
+              "lmsIdentifier": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": ["type", "value"]
+              },
+              "elementDescription": {
+                "type": "string"
+              },
+              "elementLearningGoal": {
+                "type": "string"
+              },
+              "elementCategory": {
+                "type": "string"
+              },
+              "elementContentType": {
+                "type": "string"
+              },
+              "elementPoints": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "elementId",
+              "lmsIdentifier",
+              "elementDescription",
+              "elementLearningGoal",
+              "elementCategory",
+              "elementContentType",
+              "elementPoints"
+            ],
+            "minItems": 1
+          }
+        }
+      },
+      "required": ["lmsIdentifier", "worldDescription", "worldLearningGoals", "learningSpaces", "learningElements"]
+    }
+  },
+  "required": ["fileVersion", "amgVersion", "learningWorld"]
+}
