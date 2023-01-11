@@ -8,6 +8,13 @@
     "amgVersion": {
       "type": "string"
     },
+    "author": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "enum": ["de", "en"]
+    },
     "world": {
       "type": "object",
       "properties": {
@@ -126,21 +133,13 @@
                 "type": "integer"
               }
             },
-            "required": [
-              "elementId",
-              "lmsIdentifier",
-              "elementDescription",
-              "elementLearningGoal",
-              "elementCategory",
-              "elementContentType",
-              "elementPoints"
-            ],
+            "required": ["elementId", "lmsIdentifier", "elementCategory", "elementContentType", "elementPoints"],
             "minItems": 1
           }
         }
       },
-      "required": ["lmsIdentifier", "worldDescription", "worldLearningGoals", "spaces", "elements"]
+      "required": ["lmsIdentifier", "spaces", "elements"]
     }
   },
-  "required": ["fileVersion", "amgVersion", "world"]
+  "required": ["fileVersion", "world"]
 }

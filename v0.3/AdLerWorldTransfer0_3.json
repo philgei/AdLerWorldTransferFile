@@ -1,6 +1,8 @@
 {
   "fileVersion": "0.3",
   "amgVersion": "1.0",
+  "author": "Peter",
+  "language": "de",
   "world": {
     "lmsIdentifier": {
       "type": "idNumber",
