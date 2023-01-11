@@ -43,7 +43,7 @@ Die Namen von Schlüsseln, welche mehrere Werte (Arrays) beinhalten, sollen imme
 | worldDescription    | string                    | Beschreibung der Lernwelt, welche dem Nutzer angezeigt wird (nicht required)                 |
 | worldLearningGoals  | [string]                  | Einzelne Lernziele der Welt (nicht required)                                                 |
 | spaceContent        | [int]                     | ids der LernRäume, welche sich in der Welt befinden                                          |
-| includedPoints      | int                       | direkt beim Start wird sich in Moodle angemeldet                                             |
+| includedPoints      | int                       | Wie viele Punkte ein Raum Maximal abwerfen kann                                             |
 | requiredPoints      | integer                   | Wie viele Punkte in einem Raum angesammelt werden müssen, damit er als abgeschlossen gilt    |
 | requiredSpaces      | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die Bedingung zum öffnen des Space bilden          |
 | elementId           | int                       | in des LernElements                                                                          |
@@ -100,6 +100,7 @@ Eine Beispielhafte Verknüpfung für einen Lernraum ist: `"requiredSpaces": "(5)
 - **elementContent**: Wurde entfernt, da der content des Lernelements ohnthin über die API erfragt wird, da nicht in jeden fall der content hier angegeben werden kann.
 - **elementContentType**: Gibt an, wie der Inhalt des Element behandelt werden muss, sobald er von dem 3D Frontend geladen wurde.
 - **learningSpaceParentId**: Wurde entfernt, da es eine redundante Information ist und nicht nicht Normalisiert ist.
+- **included Points**: Wie viel Punkte ein Raum maximal abwerfen kann. Das ist halt so von dem alten drin. Könnte allerdings entfernt werden, da redundate Information
 
 # Breaking changes zu der undokumentierten Version
 
