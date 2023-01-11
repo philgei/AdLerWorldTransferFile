@@ -8,7 +8,7 @@
     "amgVersion": {
       "type": "string"
     },
-    "learningWorld": {
+    "world": {
       "type": "object",
       "properties": {
         "lmsIdentifier": {
@@ -32,7 +32,7 @@
             "type": "string"
           }
         },
-        "learningSpaces": {
+        "spaces": {
           "type": "array",
           "items": {
             "type": "object",
@@ -61,7 +61,7 @@
                   "type": "string"
                 }
               },
-              "learningSpaceContent": {
+              "spaceContent": {
                 "type": "array",
                 "items": {
                   "type": "integer"
@@ -83,14 +83,14 @@
               "lmsIdentifier",
               "spaceDescription",
               "spaceLearningGoals",
-              "learningSpaceContent",
+              "spaceContent",
               "includedPoints",
               "requiredSpaces"
             ]
           },
           "minItems": 1
         },
-        "learningElements": {
+        "elements": {
           "type": "array",
           "items": {
             "type": "object",
@@ -139,8 +139,8 @@
           }
         }
       },
-      "required": ["lmsIdentifier", "worldDescription", "worldLearningGoals", "learningSpaces", "learningElements"]
+      "required": ["lmsIdentifier", "worldDescription", "worldLearningGoals", "spaces", "elements"]
     }
   },
-  "required": ["fileVersion", "amgVersion", "learningWorld"]
+  "required": ["fileVersion", "amgVersion", "world"]
 }

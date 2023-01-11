@@ -1,14 +1,14 @@
 {
   "fileVersion": "0.3",
   "amgVersion": "1.0",
-  "learningWorld": {
+  "world": {
     "lmsIdentifier": {
       "type": "idNumber",
       "value": "123456789randomID"
     },
     "worldDescription": "Beschreibung der Welt",
     "worldLearningGoals": ["Ziel 1", "Ziel 2"],
-    "learningSpaces": [
+    "spaces": [
       {
         "spaceId": 1,
         "lmsIdentifier": {
@@ -17,7 +17,7 @@
         },
         "spaceDescription": "Beschreibung des Lernraums",
         "spaceLearningGoals": ["Ziel 1", "Ziel 2"],
-        "learningSpaceContent": [1, 2, 3],
+        "spaceContent": [1, 2, 3],
         "includedPoints": 123,
         "requiredPoints": 100,
         "requiredSpaces": "(5)v((7)^(4))"
@@ -30,13 +30,13 @@
         },
         "spaceDescription": "Beschreibung des Lernraums",
         "spaceLearningGoals": ["Ziel 1", "Ziel 2"],
-        "learningSpaceContent": [5, 6],
+        "spaceContent": [5, 6],
         "includedPoints": 123,
         "requiredPoints": 100,
         "requiredSpaces": "(5)v((7)^(4))"
       }
     ],
-    "learningElements": [
+    "elements": [
       {
         "elementId": 1,
         "lmsIdentifier": {
