@@ -34,26 +34,26 @@ Die Namen von Schlüsseln, welche mehrere Werte (Arrays) beinhalten, sollen imme
 
 ## Beschreibung der einzelnen Felder
 
-| Schlüssel           | Datentyp                  | Funktion                                                                                     |
-| ------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
-| fileVersion         | string                    | gibt die Version des AWT Files an                                                            |
-| amgVersion          | string                    | gibt die Version des AMG Tools (nicht required) an                                           |
-| world               | objekt                    | beinhaltet alle Daten der Lernwelt                                                           |
-| lmsIdentifier       | objekt                    | Objekt, welches durch Angabe von Typ und Wert ein Elementen im LMS eindeutig bezeichnen kann |
-| worldDescription    | string                    | Beschreibung der Lernwelt, welche dem Nutzer angezeigt wird (nicht required)                 |
-| worldLearningGoals  | [string]                  | Einzelne Lernziele der Welt (nicht required)                                                 |
-| spaceContent        | [int]                     | ids der LernRäume, welche sich in der Welt befinden                                          |
-| includedPoints      | int                       | Wie viele Punkte ein Raum Maximal abwerfen kann                                             |
-| requiredPoints      | integer                   | Wie viele Punkte in einem Raum angesammelt werden müssen, damit er als abgeschlossen gilt    |
-| requiredSpaces      | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die Bedingung zum öffnen des Space bilden          |
-| elementId           | int                       | in des LernElements                                                                          |
-| elementDescripiotn  | string                    | Beschreibung des Lernelements (nicht required)                                               |
-| elementLearningGoal | string                    | ziel des Lernelements (nicht required)                                                       |
-| elementCategory     | string                    | Art des Lernelements (Bild, Text, H5P, etc)                                                  |
-| elementContentType  | string                    | genauer Content des Lernelements (im Falle Bild: Jpeg, PNG, ...)                             |
-| elementPoints       | integer                   | wie viele punkte gibt das Element (maximal) wenn es abgeschlossen ist                        |
-| author              | string                    | Autor der Lernwelt (nicht required)                                                          |
-| language            | string ["de", "en"]       | Sprache der Lernwelt in Country Code ist (nicht required)                                    |
+| Schlüssel           | Datentyp                  | Funktion                                                                                                       |
+| ------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| fileVersion         | string                    | gibt die Version des AWT Files an                                                                              |
+| amgVersion          | string                    | gibt die Version des AMG Tools (nicht required) an                                                             |
+| world               | objekt                    | beinhaltet alle Daten der Lernwelt                                                                             |
+| lmsIdentifier       | objekt                    | Objekt, welches durch Angabe von Typ und Wert ein Elementen im LMS eindeutig bezeichnen kann                   |
+| worldDescription    | string                    | Beschreibung der Lernwelt, welche dem Nutzer angezeigt wird (nicht required)                                   |
+| worldLearningGoals  | [string]                  | Einzelne Lernziele der Welt (nicht required)                                                                   |
+| spaceContent        | [int]                     | ids der LernRäume, welche sich in der Welt befinden                                                            |
+| includedPoints      | int                       | Wie viele Punkte ein Raum Maximal abwerfen kann                                                                |
+| requiredPoints      | integer                   | Wie viele Punkte in einem Raum angesammelt werden müssen, damit er als abgeschlossen gilt                      |
+| requiredSpaces      | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die Bedingung zum öffnen des Space bilden (siehe beschreibung unten) |
+| elementId           | int                       | in des LernElements                                                                                            |
+| elementDescripiotn  | string                    | Beschreibung des Lernelements (nicht required)                                                                 |
+| elementLearningGoal | string                    | ziel des Lernelements (nicht required)                                                                         |
+| elementCategory     | string                    | Art des Lernelements (Bild, Text, H5P, etc)                                                                    |
+| elementContentType  | string                    | genauer Content des Lernelements (im Falle Bild: Jpeg, PNG, ...)                                               |
+| elementPoints       | integer                   | wie viele punkte gibt das Element (maximal) wenn es abgeschlossen ist                                          |
+| author              | string                    | Autor der Lernwelt (nicht required)                                                                            |
+| language            | string ["de", "en"]       | Sprache der Lernwelt in Country Code ist (nicht required)                                                      |
 
 ## JSON Schema
 
