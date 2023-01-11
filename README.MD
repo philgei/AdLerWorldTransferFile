@@ -28,19 +28,19 @@ Die Namen von Schlüsseln, welche mehrere Werte (Arrays) beinhalten, sollen imme
 |----------------------|---------------------------|---------------------------------------------------------------------------------------------|
 | fileVersion          | string                    | gibt die Version des AWT Files an                                                           |
 | amgVersion           | string                    | gibt die Version des AMG Tools an                                                           |
-| leanringWorld        | objekt                    | beinhaltet alle Daten der Wernwelt                                                          |
-| lmsIdentifier        | objekt                    | Objekt, welches durch angabe von Typ und Wert ein Elmenten im LMS eindeutig bezeichnen kann |
-| worldDescription     | string                    | beschreibung der Lernwelt, welche dem Nutzer angezeigt wird                                 |
+| learningWorld        | objekt                    | beinhaltet alle Daten der Lernwelt                                                          |
+| lmsIdentifier        | objekt                    | Objekt, welches durch Angabe von Typ und Wert ein Elementen im LMS eindeutig bezeichnen kann |
+| worldDescription     | string                    | Beschreibung der Lernwelt, welche dem Nutzer angezeigt wird                                 |
 | worldLearningGoals   | [string]                  | Einzelne Lernziele der Welt                                                                 |
 | learningSpaceContent | [int]                     | ids der LernRäume, welche sich in der Welt befinden                                         |
 | includedPoints       | int                       | direkt beim Start wird sich in Moodle angemeldet                                            |
 | requiredPoints       | integer                    | Wie viele Punkte in einem Raum angesammelt werden müssen, damit er als abgeschlossen gilt  |
-| requiredSpaces       | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die bedingung zum öffnen des Space bilden        |
+| requiredSpaces       | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die Bedingung zum öffnen des Space bilden        |
 | elementId            | int                       | in des LernElements                                                                         |
 | elementDescription   | string                    | Beschreibung des Lernelements                                                               |
-| elementLearningGoal  | string                    | ziel des lernelements                                                                       |
-| elementCategory      | string                    | art des Lernelements (Bild, Text, H5P, etc)                                                 |
-| elementConentType    | string                    | genauer Content des Lernelements (im Falle bild: Jpeg, PNG, ...)                            |
+| elementLearningGoal  | string                    | ziel des Lernelements                                                                       |
+| elementCategory      | string                    | Art des Lernelements (Bild, Text, H5P, etc)                                                 |
+| elementContentType    | string                    | genauer Content des Lernelements (im Falle Bild: Jpeg, PNG, ...)                            |
 | elementPoints        | integer                   | wie viele punkte gibt das Element (maximal) wenn es abgeschlossen ist                       |
 
 ## JSON Schema
