@@ -101,13 +101,15 @@ Eine Beispielhafte Verknüpfung für einen Lernraum ist: `"requiredSpaces": "(5)
 - **elementContentType**: Gibt an, wie der Inhalt des Element behandelt werden muss, sobald er von dem 3D Frontend geladen wurde.
 - **learningSpaceParentId**: Wurde entfernt, da es eine redundante Information ist und nicht nicht Normalisiert ist.
 - **included Points**: Wie viel Punkte ein Raum maximal abwerfen kann. Das ist halt so von dem alten drin. Könnte allerdings entfernt werden, da redundate Information
+- **Autor und Language** Da es im AMG ohnehin eingegeben wird, schlage ich vor, das direkt auch mitzuliefern. Es wurde sich auch überlegt, den moodle Autor dafür zu nutzen, allerdings kann es auch ein anderer sein, der das Backup auf Moodle hochlädt.
 
 # Breaking changes zu der undokumentierten Version
 
 - `identifier` ist kein Array zudem gibt es nicht mehr den typen "fileName", sondern er heißt jetzt "moduleName" außerdem heißt er jetzt `lmsIdentifier`
-- `description` wurde in `worldDescription` umbenannt gleiches gilt für Elemente
-- `goals` der Lernwelt wurde in `worldLearningGoals` umbenannt gleiches gilt für Elemente
+- `description` in der Welt, den Spaces und Elementen wurde in `worldDescription`, `spaceDescription` und `elementDescription` umbenannt
+- `goals` in der Welt, den Spaces und Elementen wurde in `worldGoals`, `spaceGoals` und `elementGoal` umbenannt
 - `worldGoals` ist ein Array (auf jeden fall als Diskussionsgrundlage)
+- `spaceGoals` ist ebenfalls ein Array (auf jeden fall als Diskussionsgrundlage)
 - `requirements` heißt jetzt `requiredSpaces`
 - `elementType` hat die Syntax: elementkategorie:elementtyp
 - `learningElementValueList` wird durch einen einfachen Integer `elementPoints` ersetzt
