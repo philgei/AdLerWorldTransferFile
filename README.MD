@@ -42,6 +42,7 @@ Die Namen von Schlüsseln, welche mehrere Werte (Arrays) beinhalten, sollen imme
 | worldDescription     | string   | Beschreibung der Lernwelt, welche dem Nutzer angezeigt wird                                  | Nein      |
 | worldGoals           | [string] | Einzelne Lernziele der Welt                                                                  | Nein      |
 | worldName            | string   | Name der Welt                                                                                | Ja        |
+| spaces            | [object]   | Array aus Spaces, welche in der Welt vorhanden sind                                                                                | Ja        |
 
 ### Beschreibung der Felder der Spaces
 
