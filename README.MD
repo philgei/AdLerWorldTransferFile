@@ -34,26 +34,29 @@ Die Namen von Schlüsseln, welche mehrere Werte (Arrays) beinhalten, sollen imme
 
 ## Beschreibung der einzelnen Felder
 
-| Schlüssel           | Datentyp                  | Funktion                                                                                                       |
-| ------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| fileVersion         | string                    | gibt die Version des AWT Files an                                                                              |
-| amgVersion          | string                    | gibt die Version des AMG Tools (nicht required) an                                                             |
-| world               | objekt                    | beinhaltet alle Daten der Lernwelt                                                                             |
-| lmsIdentifier       | objekt                    | Objekt, welches durch Angabe von Typ und Wert ein Elementen im LMS eindeutig bezeichnen kann                   |
-| worldDescription    | string                    | Beschreibung der Lernwelt, welche dem Nutzer angezeigt wird (nicht required)                                   |
-| worldLearningGoals  | [string]                  | Einzelne Lernziele der Welt (nicht required)                                                                   |
-| spaceContent        | [int]                     | ids der LernRäume, welche sich in der Welt befinden                                                            |
-| includedPoints      | int                       | Wie viele Punkte ein Raum Maximal abwerfen kann                                                                |
-| requiredPoints      | integer                   | Wie viele Punkte in einem Raum angesammelt werden müssen, damit er als abgeschlossen gilt                      |
-| requiredSpaces      | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die Bedingung zum öffnen des Space bilden (siehe beschreibung unten) |
-| elementId           | int                       | in des LernElements                                                                                            |
-| elementDescripiotn  | string                    | Beschreibung des Lernelements (nicht required)                                                                 |
-| elementLearningGoal | string                    | ziel des Lernelements (nicht required)                                                                         |
-| elementCategory     | string                    | Art des Lernelements (Bild, Text, H5P, etc)                                                                    |
-| elementContentType  | string                    | genauer Content des Lernelements (im Falle Bild: Jpeg, PNG, ...)                                               |
-| elementPoints       | integer                   | wie viele punkte gibt das Element (maximal) wenn es abgeschlossen ist                                          |
-| author              | string                    | Autor der Lernwelt (nicht required)                                                                            |
-| language            | string ["de", "en"]       | Sprache der Lernwelt in Country Code ist (nicht required)                                                      |
+| Schlüssel          | Datentyp                  | Funktion                                                                                                       |
+| ------------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| fileVersion        | string                    | gibt die Version des AWT Files an                                                                              |
+| amgVersion         | string                    | gibt die Version des AMG Tools (nicht required) an                                                             |
+| world              | objekt                    | beinhaltet alle Daten der Lernwelt                                                                             |
+| lmsElementIdentifier      | objekt                    | Objekt, welches durch Angabe von Typ und Wert ein Elementen im LMS eindeutig bezeichnen kann                   |
+| worldDescription   | string                    | Beschreibung der Lernwelt, welche dem Nutzer angezeigt wird (nicht required)                                   |
+| worldGoals         | [string]                  | Einzelne Lernziele der Welt (nicht required)                                                                   |
+| spaceContents       | [int]                     | ids der LernRäume, welche sich in der Welt befinden                                                            |
+| includedPoints     | int                       | Wie viele Punkte ein Raum Maximal abwerfen kann                                                                |
+| requiredPointsToComplete     | integer                   | Wie viele Punkte in einem Raum angesammelt werden müssen, damit er als abgeschlossen gilt                      |
+| requiredSpacesToEnter     | string (boolsche Algebra) | Spaces mit UND und ODER verknüpft, welche die Bedingung zum öffnen des Space bilden (siehe beschreibung unten) |
+| elementId          | int                       | in des LernElements                                                                                            |
+| elementDescripiotn | string                    | Beschreibung des Lernelements (nicht required)                                                                 |
+| elementGoal        | string                    | ziel des Lernelements (nicht required)                                                                         |
+| elementCategory    | string                    | Art des Lernelements (Bild, Text, H5P, etc)                                                                    |
+| elementFileType | string                    | genauer Content des Lernelements (im Falle Bild: Jpeg, PNG, ...)                                               |
+| elementPoints      | integer                   | wie viele punkte gibt das Element (maximal) wenn es abgeschlossen ist                                          |
+| author             | string                    | Autor der Lernwelt (nicht required)                                                                            |
+| language           | string ["de", "en"]       | Sprache der Lernwelt in Country Code ist (nicht required)                                                      |
+| spaceName          | string                    | Name des Lernraumes                                                                                            |
+| worldName          | string                    | Name der Welt                                                                                                  |
+| elementName        | string                    | Name des Elements                                                                                              |
 
 ## JSON Schema
 
@@ -69,22 +72,22 @@ Dabei werden räume mittels UND (^) und ODER (v) verknüpft. Komplexere zusammen
 
 Dabei ist zu beachten, dass ein Raum ab dann als abgeschlossen gilt, wenn er seine benötigen Punkte zur Freischaltung erreicht hat.
 
-Eine Beispielhafte Verknüpfung für einen Lernraum ist: `"requiredSpaces": "(5)v((7)^(4))"`
+Eine Beispielhafte Verknüpfung für einen Lernraum ist: `"requiredSpacesToEnter": "(5)v((7)^(4))"`
 
-### Mögliche Werte (Bitte ergänzen)
+## Mögliche Werte (Bitte ergänzen)
 
-#### lmsIdentifier
+### lmsElementIdentifier
 
 - type: "idNumber"
   - value: "UUID"
 - type: "moduleName"
   - value: "NameDesModulsInMoodle"
 
-#### elementCategory
+### elementCategory
 
 - "image", "text", "h5p" oder "video"
 
-#### elementContentType
+### elementFileType
 
 - "image:jpeg", "image:png", "video:mp4", "h5p" weitere bitte von AMG ergänzen
 
@@ -93,25 +96,46 @@ Eine Beispielhafte Verknüpfung für einen Lernraum ist: `"requiredSpaces": "(5)
 # Diskussionspunkte
 
 - **identifier für verschiedene Elemente auf dem LMS**: Elemente können auf dem LMS leider nicht immer mit einer Id versehen werden. Daher MUSS es mehrere Möglichkeiten geben, diese zu identifizieren. Bisher werden Elemente im LMS (Lernwelt, Lernelement) mittels dem Namen identifiziert. Da es in Zukunft aber möglich sein soll, diese Elemente mittels einer ID zu identifizieren, wurde sich bis jetzt dazu entschieden, ein Objekt aus Identifikationsmethode und dem jeweiligen Wert zu übergeben.
-- **worldLearningGoals**: Im Gegensatz zu bisher ist hier nun ein Array aus Strings. Das hat den Grund, dass es eventuell sinnvoller ist, die Lernziele als Liste zu Formatieren und diese dementsprechend nutzerfreundlicher anzuzeigen. Gleiches gilt für die Spaces, jedoch nicht für Elemente
+- **worldGoals**: Im Gegensatz zu bisher ist hier nun ein Array aus Strings. Das hat den Grund, dass es eventuell sinnvoller ist, die Lernziele als Liste zu Formatieren und diese dementsprechend nutzerfreundlicher anzuzeigen. Gleiches gilt für die Spaces, jedoch nicht für Elemente
 - **fileVersion**: Soll dazu dienen, den richtigen Parser zu wählen.
 - **amgVersion**: Soll primär zum debugging dienen, um zu identifizieren, mit welchem Generator das File erstellt wurde, sollte etwas schief gegangen sein.
 - **elementPoints**: Ursprünglich war hier eine Liste an "Belohnungen", welche der Nutzer für das Abschließen des Elements bekommt. Neben Punkten hätten dies beispielsweiße auch Badges oder Errungenschaften sein können. Jedoch wurde sich dazu entschieden, Errungenschaften und Badges vorerst zu Ignorieren und diese, wenn immer noch gefordert an anderer Stellt zu implementieren.
 - **elementContent**: Wurde entfernt, da der content des Lernelements ohnthin über die API erfragt wird, da nicht in jeden fall der content hier angegeben werden kann.
-- **elementContentType**: Gibt an, wie der Inhalt des Element behandelt werden muss, sobald er von dem 3D Frontend geladen wurde.
+- **elementFileType**: Gibt an, wie der Inhalt des Element behandelt werden muss, sobald er von dem 3D Frontend geladen wurde.
 - **learningSpaceParentId**: Wurde entfernt, da es eine redundante Information ist und nicht nicht Normalisiert ist.
 - **included Points**: Wie viel Punkte ein Raum maximal abwerfen kann. Das ist halt so von dem alten drin. Könnte allerdings entfernt werden, da redundate Information
 - **Autor und Language** Da es im AMG ohnehin eingegeben wird, schlage ich vor, das direkt auch mitzuliefern. Es wurde sich auch überlegt, den moodle Autor dafür zu nutzen, allerdings kann es auch ein anderer sein, der das Backup auf Moodle hochlädt.
+- **namen für alle elemente** Es wurden Namen für alle Elemente hinzugefügt (World, Space, Element)
+- **"Learning" als prefix herausgestrichen** der übersicht halber wurde das Wort "Learning" weg rationalisiert
 
 # Breaking changes zu der undokumentierten Version
 
-- `identifier` ist kein Array zudem gibt es nicht mehr den typen "fileName", sondern er heißt jetzt "moduleName" außerdem heißt er jetzt `lmsIdentifier`
+- `identifier` ist kein Array zudem gibt es nicht mehr den typen "fileName", sondern er heißt jetzt "moduleName" außerdem heißt er jetzt `lmsElementIdentifier`
 - `description` in der Welt, den Spaces und Elementen wurde in `worldDescription`, `spaceDescription` und `elementDescription` umbenannt
 - `goals` in der Welt, den Spaces und Elementen wurde in `worldGoals`, `spaceGoals` und `elementGoal` umbenannt
 - `worldGoals` ist ein Array (auf jeden fall als Diskussionsgrundlage)
 - `spaceGoals` ist ebenfalls ein Array (auf jeden fall als Diskussionsgrundlage)
-- `requirements` heißt jetzt `requiredSpaces`
+- `requirements` heißt jetzt `requiredSpacesToEnter`
 - `elementType` hat die Syntax: elementkategorie:elementtyp
 - `learningElementValueList` wird durch einen einfachen Integer `elementPoints` ersetzt
 - `learningSpaceParentId` ist nicht mehr vorhanden
 - `fileVersion` zwingend benötigt (oder ist wird auf ein default Seites backend und 3D zurück gefallen)
+- `included points` ist raus geflogen, da es redundant ist und im 3D nicht benötigt wird
+
+### Notizen
+
+- DONE: learning komplett streichen
+- DONE: element und space und world name fehlt
+- DONE: elsElementIdentifier
+- DONE: included points raus
+- DONE: requiredPointsToComplete -> requiredPointsToCompleteToComplete
+- DONE: requiredSpacesToEnter -> requiredSpacesToEnterToEnter
+- DONE: spaceContents muss plural
+- raumziel fehlt in tabelle
+- tabelle weitere spalte für req
+- space goal ist nicht in tabelle
+- welche kategorien gibt es, welche typen gibt es
+- elementFileType -> elementFileType -> image: prefix weg
+- tabelle in bereiche unterteilen
+- mögliche werte evtl in tabelle
+- DONE: element goal soll auch array werden

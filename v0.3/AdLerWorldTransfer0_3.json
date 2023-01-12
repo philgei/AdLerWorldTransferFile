@@ -4,51 +4,40 @@
   "author": "Peter",
   "language": "de",
   "world": {
-    "lmsIdentifier": {
+    "lmsElementIdentifier": {
       "type": "idNumber",
       "value": "123456789randomID"
     },
+    "worldName": "Name der Welt",
     "worldDescription": "Beschreibung der Welt",
-    "worldLearningGoals": ["Ziel 1", "Ziel 2"],
+    "worldGoals": ["Ziel 1", "Ziel 2"],
     "spaces": [
       {
         "spaceId": 1,
-        "lmsIdentifier": {
+        "lmsElementIdentifier": {
           "type": "idNumber",
           "value": "123456789randomID"
         },
+        "spaceName": "Name des Lernraums",
         "spaceDescription": "Beschreibung des Lernraums",
-        "spaceLearningGoals": ["Ziel 1", "Ziel 2"],
-        "spaceContent": [1, 2, 3],
-        "includedPoints": 123,
-        "requiredPoints": 100,
-        "requiredSpaces": "(5)v((7)^(4))"
-      },
-      {
-        "spaceId": 2,
-        "lmsIdentifier": {
-          "type": "idNumber",
-          "value": "123456789randomID"
-        },
-        "spaceDescription": "Beschreibung des Lernraums",
-        "spaceLearningGoals": ["Ziel 1", "Ziel 2"],
-        "spaceContent": [5, 6],
-        "includedPoints": 123,
-        "requiredPoints": 100,
-        "requiredSpaces": "(5)v((7)^(4))"
+        "spaceGoals": ["Ziel 1", "Ziel 2"],
+        "spaceContents": [1, 2, 3],
+        "requiredPointsToComplete": 100,
+        "requiredSpacesToEnter": "(5)v((7)^(4))"
       }
     ],
     "elements": [
       {
         "elementId": 1,
-        "lmsIdentifier": {
+        "lmsElementIdentifier": {
           "type": "moduleName",
           "value": "Ein wunderschöner, für den Nutzer sichtbarer, String"
         },
+        "elementName": "Name des Elements",
         "elementDescription": "Beschreibung des Lernelements",
-        "elementLearningGoal": "Ziel",
+        "elementGoals": ["Ziel 1", "Ziel 2"],
         "elementCategory": "image",
-        "elementContentType": "image:png",
+        "elementFileType": "image:png",
         "elementPoints": 123
       }
     ]

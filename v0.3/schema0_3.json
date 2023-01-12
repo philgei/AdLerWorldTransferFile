@@ -18,7 +18,7 @@
     "world": {
       "type": "object",
       "properties": {
-        "lmsIdentifier": {
+        "lmsElementIdentifier": {
           "type": "object",
           "properties": {
             "type": {
@@ -30,10 +30,13 @@
           },
           "required": ["type", "value"]
         },
+        "worldName": {
+          "type": "string"
+        },
         "worldDescription": {
           "type": "string"
         },
-        "worldLearningGoals": {
+        "worldGoals": {
           "type": "array",
           "items": {
             "type": "string"
@@ -47,7 +50,7 @@
               "spaceId": {
                 "type": "integer"
               },
-              "lmsIdentifier": {
+              "lmsElementIdentifier": {
                 "type": "object",
                 "properties": {
                   "type": {
@@ -59,40 +62,41 @@
                 },
                 "required": ["type", "value"]
               },
+              "spaceName": {
+                "type": "string"
+              },
               "spaceDescription": {
                 "type": "string"
               },
-              "spaceLearningGoals": {
+              "spaceGoals": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "spaceContent": {
+              "spaceContents": {
                 "type": "array",
                 "items": {
                   "type": "integer"
                 },
                 "minItems": 1
               },
-              "includedPoints": {
+
+              "requiredPointsToComplete": {
                 "type": "integer"
               },
-              "requiredPoints": {
-                "type": "integer"
-              },
-              "requiredSpaces": {
+              "requiredSpacesToEnter": {
                 "type": "string"
               }
             },
             "required": [
               "spaceId",
-              "lmsIdentifier",
+              "lmsElementIdentifier",
               "spaceDescription",
-              "spaceLearningGoals",
-              "spaceContent",
-              "includedPoints",
-              "requiredSpaces"
+              "spaceGoals",
+              "spaceContents",
+              "requiredSpacesToEnter",
+              "spaceName"
             ]
           },
           "minItems": 1
@@ -105,7 +109,7 @@
               "elementId": {
                 "type": "integer"
               },
-              "lmsIdentifier": {
+              "lmsElementIdentifier": {
                 "type": "object",
                 "properties": {
                   "type": {
@@ -117,28 +121,41 @@
                 },
                 "required": ["type", "value"]
               },
+              "elementName": {
+                "type": "string"
+              },
               "elementDescription": {
                 "type": "string"
               },
-              "elementLearningGoal": {
-                "type": "string"
+              "elementGoals": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "elementCategory": {
                 "type": "string"
               },
-              "elementContentType": {
+              "elementFileType": {
                 "type": "string"
               },
               "elementPoints": {
                 "type": "integer"
               }
             },
-            "required": ["elementId", "lmsIdentifier", "elementCategory", "elementContentType", "elementPoints"],
+            "required": [
+              "elementId",
+              "lmsElementIdentifier",
+              "elementCategory",
+              "elementFileType",
+              "elementPoints",
+              "elementName"
+            ],
             "minItems": 1
           }
         }
       },
-      "required": ["lmsIdentifier", "spaces", "elements"]
+      "required": ["lmsElementIdentifier", "spaces", "elements", "worldName"]
     }
   },
   "required": ["fileVersion", "world"]
