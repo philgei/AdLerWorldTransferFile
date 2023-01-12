@@ -118,28 +118,51 @@ Eine Beispielhafte Verknüpfung für einen Lernraum ist: `"requiredSpacesToEnter
 # Diskussionspunkte
 
 - **identifier für verschiedene Elemente auf dem LMS**: Elemente können auf dem LMS leider nicht immer mit einer Id versehen werden. Daher MUSS es mehrere Möglichkeiten geben, diese zu identifizieren. Bisher werden Elemente im LMS (Lernwelt, Lernelement) mittels dem Namen identifiziert. Da es in Zukunft aber möglich sein soll, diese Elemente mittels einer ID zu identifizieren, wurde sich bis jetzt dazu entschieden, ein Objekt aus Identifikationsmethode und dem jeweiligen Wert zu übergeben.
-- **worldGoals**: Im Gegensatz zu bisher ist hier nun ein Array aus Strings. Das hat den Grund, dass es eventuell sinnvoller ist, die Lernziele als Liste zu Formatieren und diese dementsprechend nutzerfreundlicher anzuzeigen. Gleiches gilt für die Spaces, jedoch nicht für Elemente
+- **worldGoals**: Im Gegensatz zu bisher ist hier nun ein Array aus Strings. Das hat den Grund, dass es eventuell sinnvoller ist, die Lernziele als Liste zu Formatieren und diese dementsprechend nutzerfreundlicher anzuzeigen. Gleiches gilt für die Spaces und Elemente
 - **fileVersion**: Soll dazu dienen, den richtigen Parser zu wählen.
 - **amgVersion**: Soll primär zum debugging dienen, um zu identifizieren, mit welchem Generator das File erstellt wurde, sollte etwas schief gegangen sein.
 - **elementPoints**: Ursprünglich war hier eine Liste an "Belohnungen", welche der Nutzer für das Abschließen des Elements bekommt. Neben Punkten hätten dies beispielsweiße auch Badges oder Errungenschaften sein können. Jedoch wurde sich dazu entschieden, Errungenschaften und Badges vorerst zu Ignorieren und diese, wenn immer noch gefordert an anderer Stellt zu implementieren.
-- **elementContent**: Wurde entfernt, da der content des Lernelements ohnthin über die API erfragt wird, da nicht in jeden fall der content hier angegeben werden kann.
+- **url**: Wurde entfernt, da der content des Lernelements ohnthin über die API erfragt wird, da nicht in jeden fall der content hier angegeben werden kann.
 - **elementFileType**: Gibt an, wie der Inhalt des Element behandelt werden muss, sobald er von dem 3D Frontend geladen wurde.
 - **learningSpaceParentId**: Wurde entfernt, da es eine redundante Information ist und nicht nicht Normalisiert ist.
-- **included Points**: Wie viel Punkte ein Raum maximal abwerfen kann. Das ist halt so von dem alten drin. Könnte allerdings entfernt werden, da redundate Information
 - **Autor und Language** Da es im AMG ohnehin eingegeben wird, schlage ich vor, das direkt auch mitzuliefern. Es wurde sich auch überlegt, den moodle Autor dafür zu nutzen, allerdings kann es auch ein anderer sein, der das Backup auf Moodle hochlädt.
 - **namen für alle elemente** Es wurden Namen für alle Elemente hinzugefügt (World, Space, Element)
 - **"Learning" als prefix herausgestrichen** der übersicht halber wurde das Wort "Learning" weg rationalisiert
 
 # Breaking changes zu der undokumentierten Version
+## Root Level
+- `fileVersion` wird zwingen benötigt
+- `learningWorld` heißt jetzt `world`
+- ``
 
-- `identifier` ist kein Array zudem gibt es nicht mehr den typen "fileName", sondern er heißt jetzt "moduleName" außerdem heißt er jetzt `lmsElementIdentifier`
-- `description` in der Welt, den Spaces und Elementen wurde in `worldDescription`, `spaceDescription` und `elementDescription` umbenannt
-- `goals` in der Welt, den Spaces und Elementen wurde in `worldGoals`, `spaceGoals` und `elementGoal` umbenannt
-- `worldGoals` ist ein Array (auf jeden fall als Diskussionsgrundlage)
-- `spaceGoals` ist ebenfalls ein Array (auf jeden fall als Diskussionsgrundlage)
+## World
+- `idNumber` existiert nicht mehr
+- `identifier` heißt jetzt `lmsElementIdentifier` und hat andere werte
+- `worldName` ist zwingend notwendig
+- `description` und `goals` heißen jetzt `worldDescription` und `worldGoals`
+- `worldGoals` ist ein Array aus strings
+- `topics` existiert nicht mehr
+- `learningWorldContent` existiert nicht mehr
+- `learningSpaces` heißt jetzt `spaces`
+
+## Space
+- `identifier` heißt jetzt `lmsElementIdentifier` und hat andere werte
+- `spaceName` wird jetzt zwingend benötigt
+- `description` und `goals` heißen jetzt `spaceDescription` und `spaceGoals`
+- `spaceGoals` ist ein array aus Strings
+- `learningspaceContent` heißt jetzt `spaceContents`
+- `includedPoints` existiert nicht mehr
+- `requiredPoints` heißt jetzt `requiredPointsToComplete`
 - `requirements` heißt jetzt `requiredSpacesToEnter`
-- `elementType` hat die Syntax: elementkategorie:elementtyp
-- `learningElementValueList` wird durch einen einfachen Integer `elementPoints` ersetzt
-- `learningSpaceParentId` ist nicht mehr vorhanden
-- `fileVersion` zwingend benötigt (oder ist wird auf ein default Seites backend und 3D zurück gefallen)
-- `included points` ist raus geflogen, da es redundant ist und im 3D nicht benötigt wird
+
+'
+## Element
+- `id` heißt jetzt `elementId`
+- `identifier` heißt jetzt `lmsElementIdentifier` und hat andere werte
+- `url` gibts nicht mehr
+- `description` und `goals` heißen jetzt `elementDescription` und `elementGoals`
+- `elementName` wird zwingen benötigt
+- `elementGoals` ist ein Array aus Strings
+- `elementType` heißt jetzt `elementFileType`
+- `learningElementValueList` heißt jetzt `elementPoints` und ist nur noch ein integer mit Punkten
+- `learningspaceParentId` existiert nicht mehr
